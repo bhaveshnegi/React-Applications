@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Paginationtable.css";
 
 const PaginationTable = () => {
   // Dummy data

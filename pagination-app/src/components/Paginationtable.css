@@ -1,0 +1,58 @@
+/* General styling for table and pagination */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+  }
+  
+  table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .pagination button[disabled] {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  
+  .pagination button:hover:not([disabled]) {
+    background-color: #45a049;
+  }
+  
+  /* Responsive design for screens with max-width of 800px */
+  @media (max-width: 800px) {
+    table {
+      font-size: 16px;
+    }
+    
+    .pagination {
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+  
+    .pagination button {
+      font-size: 14px;
+      padding: 8px 12px;
+      margin: 5px;
+    }
+  }
+  

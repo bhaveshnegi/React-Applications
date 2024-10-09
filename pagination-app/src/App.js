@@ -1,5 +1,5 @@
 import React from 'react'
-import PaginationTable from './PaginationTable'
+import PaginationTable from './components/PaginationTable'
 
 const App = () => {
   return (
