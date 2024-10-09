@@ -30,7 +30,7 @@ table {
   }
   
   .pagination button[disabled] {
-    background-color: #ddd;
+    background-color: #8c8484;
     cursor: not-allowed;
   }
   
