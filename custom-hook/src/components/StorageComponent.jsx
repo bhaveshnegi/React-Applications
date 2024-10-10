@@ -1,5 +1,5 @@
 import React from 'react';
-import useStorage from './hooks/useStorage'; // Adjust the import path accordingly
+import useStorage from '../hook/UseStorage'; 
 
 const StorageComponent = () => {
   const [name, setName, removeName] = useStorage('name', 'John Doe', 'local');
