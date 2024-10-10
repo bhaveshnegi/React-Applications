@@ -1,5 +1,6 @@
 import React from 'react';
 import useStorage from '../hook/UseStorage'; 
+import "./StorageComponent.css"
 
 const StorageComponent = () => {
   const [name, setName, removeName] = useStorage('name', 'John Doe', 'local');
