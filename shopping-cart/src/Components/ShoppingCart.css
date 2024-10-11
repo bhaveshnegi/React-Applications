@@ -1,0 +1,96 @@
+/* ShoppingCart.css */
+
+/* Container for the entire shopping cart */
+.cart-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading */
+  h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  /* Each cart item */
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Item name, price, and quantity */
+  .cart-item p {
+    margin: 0;
+    font-size: 1.2em;
+    color: #555;
+  }
+  
+  /* Quantity input */
+  input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-left: 10px;
+  }
+  
+  /* Remove button */
+  button {
+    padding: 8px 12px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Button hover effect */
+  button:hover {
+    background-color: #e60000;
+  }
+  
+  /* Button styles for adding items */
+  button:nth-child(2) {
+    margin-right: 10px;
+  }
+  
+  /* Total price display */
+  h2 {
+    text-align: right;
+    margin-top: 20px;
+    color: #333;
+    font-size: 1.5em;
+  }
+  
+  /* Button container */
+  button:nth-child(1),
+  button:nth-child(2) {
+    margin: 20px 5px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:nth-child(1):hover,
+  button:nth-child(2):hover {
+    background-color: #45a049;
+  }
+  

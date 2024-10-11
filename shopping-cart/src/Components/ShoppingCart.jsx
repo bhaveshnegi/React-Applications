@@ -1,5 +1,5 @@
-// ShoppingCart.js
 import React, { useState } from 'react';
+import './ShoppingCart.css'
 
 const ShoppingCart = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -22,7 +22,13 @@ const ShoppingCart = () => {
 
   // Function to remove an item from the cart
   const removeItem = (itemId) => {
-    setCartItems(cartItems.filter(cartItem => cartItem.id !== itemId));
+    setCartItems((prevItems) =>
+        prevItems.map((cartItem) =>
+          cartItem.id === itemId
+            ? { ...cartItem, quantity: cartItem.quantity - 1 }
+            : cartItem
+        ).filter((cartItem) => cartItem.quantity > 0)
+      );
   };
 
   // Function to update the quantity of an item in the cart
@@ -35,7 +41,7 @@ const ShoppingCart = () => {
   };
 
   return (
-    <div>
+    <div className='cart-container'>
       <h1>Shopping Cart</h1>
 
       {/* Cart items */}
@@ -67,11 +73,11 @@ const ShoppingCart = () => {
 
       {/* Example buttons for adding items */}
       <div>
-        <button onClick={() => addItem({ id: 1, name: 'Apple', price: 1.5 })}>
-          Add Apple
+        <button onClick={() => addItem({ id: 1, name: 'Item 1', price: 1.5 })}>
+          Add Item 1
         </button>
-        <button onClick={() => addItem({ id: 2, name: 'Banana', price: 1 })}>
-          Add Banana
+        <button onClick={() => addItem({ id: 2, name: 'Item 2', price: 1 })}>
+          Add Item 2
         </button>
       </div>
 
