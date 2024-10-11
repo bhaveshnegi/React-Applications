@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# StorageComponent
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 1. Task Description
 
-## Available Scripts
+The **StorageComponent** is a React component that allows users to store, update, and remove a value (in this case, a name) using **localStorage**. A custom `useStorage` hook is used to manage interactions with localStorage or sessionStorage, abstracting the logic for reading, updating, and deleting values from the storage.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+### 2. Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Store a Name:** Users can input and store a name in localStorage.
+- **Update the Stored Name:** The input field allows users to update the stored name, which is then displayed dynamically.
+- **Remove the Stored Name:** A button allows users to clear the stored value and remove it from localStorage.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+### 3. Application Workflow
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Name Input:**
+   - Users enter a name into the input field. The `useStorage` hook synchronizes the input with localStorage, storing the name.
 
-### `npm run build`
+2. **Display Name:**
+   - The stored name is displayed in an `<h2>` element, and updates in real-time as the user changes the input.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **Remove Name:**
+   - When the user clicks the "Remove" button, the stored name is deleted from localStorage, and the display is cleared.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 4. Technologies Used
 
-### `npm run eject`
+- **React** for building the UI components.
+- **Custom `useStorage` Hook** for managing localStorage interactions.
+- **localStorage** for persisting the stored name in the browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 5. Component & Hook Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Components
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **StorageComponent:**
+  - Renders an input field for the user to type in a name, displays the name, and provides a button to remove it from storage.
 
-## Learn More
+#### Custom Hook
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **useStorage Hook:**
+  - Uses the `useState` hook to manage the value from localStorage.
+  - Initializes with a default value if no value is present in localStorage for the specified key.
+  - Provides methods to update and remove the value from localStorage.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
